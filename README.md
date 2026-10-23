@@ -50,14 +50,13 @@ A feedforward Artificial Neural Network built to classify two interleaving moon-
 | Metric | Result |
 |---|---:|
 | Accuracy | 96.00% |
-| Precision | 0.9600 |
-| Recall | 0.9600 |
-| F1-score | 0.9600 |
-| ROC-AUC | 0.9940 |
+| Precision | 96.00% |
+| Recall | 96.00% |
+| F1-score | 96.00% |
+| ROC-AUC | 99.40% |
 
 Explore: [Project README](projects/02-ann-make-moons/README.md) · [Jupyter Notebook](projects/02-ann-make-moons/ann_make_moons_classification.ipynb) · [Open in Google Colab](https://colab.research.google.com/github/Harshithamb25/ai-coe-projects/blob/main/projects/02-ann-make-moons/ann_make_moons_classification.ipynb)
 
-*Reported metrics are specific to each project's dataset, split, and experimental setup. They should not be interpreted as guarantees of real-world performance.*
 
 ## Tools & Libraries
 
@@ -98,4 +97,4 @@ Each project's documentation should be consulted for its dataset source, evaluat
 
 ---
 
-*Projects are added incrementally as their implementations are completed, reviewed, and documented.*
+*Projects are added incrementally as their implementations are completed.*
