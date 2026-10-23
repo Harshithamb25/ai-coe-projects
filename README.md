@@ -35,7 +35,7 @@ A supervised text-classification model that predicts whether an SMS message is *
 
 Explore: [Project README](projects/01-spam-classification/README.md) · [Jupyter Notebook](projects/01-spam-classification/spam_classifier_naive_bayes.ipynb) · [Open in Google Colab](https://colab.research.google.com/github/Harshithamb25/ai-coe-projects/blob/main/projects/01-spam-classification/spam_classifier_naive_bayes.ipynb)
 
-### 03. Artificial Neural Network — Make Moons Classification
+### 02. Artificial Neural Network — Make Moons Classification
 
 A feedforward Artificial Neural Network built to classify two interleaving moon-shaped classes. This project demonstrates how nonlinear activation functions enable a neural network to learn a curved decision boundary.
 
@@ -55,7 +55,7 @@ A feedforward Artificial Neural Network built to classify two interleaving moon-
 | F1-score | 0.9600 |
 | ROC-AUC | 0.9940 |
 
-Explore: [Project README](projects/03-ann-make-moons/README.md) · [Jupyter Notebook](projects/03-ann-make-moons/ann_make_moons_classification.ipynb) · [Open in Google Colab](https://colab.research.google.com/github/Harshithamb25/ai-coe-projects/blob/main/projects/03-ann-make-moons/ann_make_moons_classification.ipynb)
+Explore: [Project README](projects/02-ann-make-moons/README.md) · [Jupyter Notebook](projects/02-ann-make-moons/ann_make_moons_classification.ipynb) · [Open in Google Colab](https://colab.research.google.com/github/Harshithamb25/ai-coe-projects/blob/main/projects/02-ann-make-moons/ann_make_moons_classification.ipynb)
 
 *Reported metrics are specific to each project's dataset, split, and experimental setup. They should not be interpreted as guarantees of real-world performance.*
 
