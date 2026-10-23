@@ -1,29 +1,29 @@
 # AI CoE — Machine Learning & Deep Learning Projects
 
-A growing collection of hands-on **Machine Learning (ML) and Deep Learning (DL) workshop projects**, implemented in Python and documented to make the problem, workflow, evaluation, and key concepts easy to understand.
-
-> **Repository status:** Project 1 is available. The remaining projects will be added as they are reviewed and documented.
+A curated collection of hands-on **Machine Learning (ML) and Deep Learning (DL) projects** developed through workshop learning and experimentation. Each project includes implementation notebooks, evaluation results, explanations of key concepts, and documented limitations.
 
 ## Project Collection
 
-| # | Project | Main concepts | Status |
+| # | Project | Main Concepts | Status |
 |---|---|---|---|
 | 01 | [SMS Spam Classification — Multinomial Naive Bayes](projects/01-spam-classification/README.md) | Text preprocessing, bag-of-words, probabilistic classification, precision and recall | Available |
 | 02 | Titanic Survival Prediction | Data cleaning, feature engineering, classification and evaluation | Planned |
-| 03 | ANN Binary Classification with `make_moons` | TensorFlow / Keras | Available |
+| 03 | [ANN Binary Classification with `make_moons`](projects/03-ann-make-moons/README.md) | Neural networks, ReLU and sigmoid activations, nonlinear decision boundaries | Available |
 | 04 | CNN Dog–Cat Classification | Convolutional neural networks and image classification | Planned |
 | 05 | Transformer-Based Next-Token Prediction | Self-attention and next-token prediction | Planned |
 
-## Featured Project: SMS Spam Classification
+## Featured Projects
 
-A supervised text-classification baseline that predicts whether an SMS message is **spam** or **ham** (legitimate).
+### 01. SMS Spam Classification
+
+A supervised text-classification model that predicts whether an SMS message is **spam** or **ham** (legitimate).
 
 - **Dataset:** [SMS Spam Collection tutorial data](https://github.com/justmarkham/pycon-2016-tutorial)
 - **Algorithm:** Multinomial Naive Bayes
 - **Text representation:** Scikit-learn `CountVectorizer`
-- **Evaluation:** Stratified 80/20 train/test split
+- **Evaluation:** Stratified 80/20 train-test split
 
-### Test-set results
+**Test-set results**
 
 | Metric | Result |
 |---|---:|
@@ -33,43 +33,69 @@ A supervised text-classification baseline that predicts whether an SMS message i
 | Spam F1-score | 93.17% |
 | ROC-AUC | 97.95% |
 
-These results are from the notebook's current test evaluation. They describe performance on this dataset and split; they do not guarantee performance on newer or real-world messages.
+Explore: [Project README](projects/01-spam-classification/README.md) · [Jupyter Notebook](projects/01-spam-classification/spam_classifier_naive_bayes.ipynb) · [Open in Google Colab](https://colab.research.google.com/github/Harshithamb25/ai-coe-projects/blob/main/projects/01-spam-classification/spam_classifier_naive_bayes.ipynb)
 
-**Explore the project:** [Project documentation](projects/01-spam-classification/README.md) · [Open notebook on GitHub](projects/01-spam-classification/spam_classifier_naive_bayes.ipynb) · [Open notebook in Google Colab](https://colab.research.google.com/github/Harshithamb25/ai-coe-projects/blob/main/projects/01-spam-classification/spam_classifier_naive_bayes.ipynb)
+### 03. Artificial Neural Network — Make Moons Classification
+
+A feedforward Artificial Neural Network built to classify two interleaving moon-shaped classes. This project demonstrates how nonlinear activation functions enable a neural network to learn a curved decision boundary.
+
+- **Dataset:** Scikit-learn `make_moons`, with 1,500 generated samples
+- **Architecture:** Two hidden layers with 16 and 8 neurons, followed by a sigmoid output layer
+- **Framework:** TensorFlow / Keras
+- **Training:** Adam optimizer with binary cross-entropy loss
+- **Evaluation:** Accuracy, precision, recall, F1-score, ROC-AUC, and confusion matrix
+
+**Test-set results**
+
+| Metric | Result |
+|---|---:|
+| Accuracy | 96.00% |
+| Precision | 0.9600 |
+| Recall | 0.9600 |
+| F1-score | 0.9600 |
+| ROC-AUC | 0.9940 |
+
+Explore: [Project README](projects/03-ann-make-moons/README.md) · [Jupyter Notebook](projects/03-ann-make-moons/ann_make_moons_classification.ipynb) · [Open in Google Colab](https://colab.research.google.com/github/Harshithamb25/ai-coe-projects/blob/main/projects/03-ann-make-moons/ann_make_moons_classification.ipynb)
+
+*Reported metrics are specific to each project's dataset, split, and experimental setup. They should not be interpreted as guarantees of real-world performance.*
 
 ## Tools & Libraries
 
-The collection will use Python and project-appropriate libraries, including:
+The collection uses Python and project-appropriate libraries, including:
 
-- Pandas and NumPy for data handling
-- Matplotlib for visualisation
-- Scikit-learn for classical ML, datasets, preprocessing, and evaluation
-- TensorFlow/Keras or other suitable deep-learning tools where used in a project
+- **NumPy and Pandas** — numerical computing and data handling
+- **Matplotlib** — data and model visualization
+- **Scikit-learn** — datasets, preprocessing, classical ML algorithms, and evaluation
+- **TensorFlow / Keras** — neural-network construction and training
 
-The exact dependencies will be documented alongside each notebook as the collection grows.
+Dependencies and setup instructions are documented alongside individual projects where needed.
 
 ## How to Use This Repository
 
-1. Open a project's README to understand its objective, dataset, method, results, and limitations.
-2. Open the corresponding Jupyter notebook on GitHub, or launch it in Google Colab using the link provided.
-3. Run the notebook cells in order and follow any dataset setup instructions.
-4. Treat reported metrics as specific to the documented data and evaluation procedure.
+1. Browse the project collection and select a topic.
+2. Read its README to understand the objective, dataset, methodology, results, and limitations.
+3. Open the corresponding Jupyter notebook on GitHub or launch it in Google Colab.
+4. Run the notebook cells in order and follow any project-specific setup instructions.
+5. Review the evaluation metrics and visualizations to understand the model's performance.
 
 ## Learning Goals
 
-Across the collection, the projects aim to demonstrate:
+These projects explore:
 
 - Data inspection, cleaning, and preprocessing
-- Train/test splitting and leakage-aware evaluation
+- Train-test splitting and leakage-aware evaluation
 - Classification metrics and error analysis
-- Classical machine learning and neural-network fundamentals
-- Computer vision and transformer/self-attention basics
-- Clear documentation, reproducible workflows, and honest reporting of limitations
+- Probabilistic machine learning and neural-network fundamentals
+- Nonlinear decision boundaries and model visualization
+- Computer vision and transformer/self-attention concepts
+- Reproducible experiments and clear technical documentation
 
-## Scope
+## Scope and Limitations
 
-These are educational workshop projects intended to build and demonstrate foundational ML/DL skills. A strong result on a small or curated dataset is not, by itself, evidence of production readiness. Dataset sources, evaluation details, limitations, and any project-specific setup requirements should be checked in each project's documentation.
+This repository is an educational collection of workshop projects intended to demonstrate foundational ML and DL concepts. Results from synthetic or curated datasets do not, by themselves, establish production readiness or guarantee performance on real-world data.
+
+Each project's documentation should be consulted for its dataset source, evaluation procedure, limitations, and setup requirements.
 
 ---
 
-*This repository is being updated incrementally as each workshop notebook is reviewed and documented.*
+*Projects are added incrementally as their implementations are completed, reviewed, and documented.*
