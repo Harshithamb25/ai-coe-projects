@@ -1,37 +1,22 @@
-# Artificial Neural Network for Binary Classification — Make Moons
+# Artificial Neural Network — Make Moons Classification
 
 ## Overview
 
-This project implements a feedforward Artificial Neural Network (ANN) to classify two interleaving moon-shaped classes using Scikit-learn's `make_moons` dataset. The experiment demonstrates how nonlinear activation functions enable a neural network to learn a curved decision boundary.
-
-## Objectives
-
-- Generate and explore a synthetic binary classification dataset.
-- Apply a stratified train-test split and feature standardization.
-- Build and train an ANN using TensorFlow/Keras.
-- Evaluate classification performance using multiple metrics.
-- Visualize training curves, the confusion matrix, and the learned decision boundary.
-
-## Tech Stack
-
-- Python
-- NumPy and Pandas
-- Matplotlib
-- Scikit-learn
-- TensorFlow / Keras
+A feedforward Artificial Neural Network (ANN) classifies two interleaving moon-shaped classes generated with Scikit-learn's `make_moons`. The experiment demonstrates how nonlinear activations help a network learn a curved decision boundary.
 
 ## Dataset
 
-The dataset contains 1,500 generated samples, two numerical input features, and two classes. Gaussian noise is introduced using `noise=0.20`.
-
 | Setting | Value |
-|---|---|
-| Samples | 1,500 |
+|---|---:|
+| Generated samples | 1,500 |
 | Input features | 2 |
 | Classes | 2 |
 | Training samples | 1,200 |
-| Testing samples | 300 |
+| Test samples | 300 |
+| Noise | 0.20 |
 | Random state | 42 |
+
+The data is split into training and test subsets. Feature standardization is fitted on the training subset only, then applied to the test subset to avoid test-data leakage.
 
 ## Model Architecture
 
@@ -40,71 +25,50 @@ The dataset contains 1,500 generated samples, two numerical input features, and 
 | Input | 2 features |
 | Hidden layer 1 | 16 neurons, ReLU |
 | Hidden layer 2 | 8 neurons, ReLU |
-| Output | 1 neuron, Sigmoid |
+| Output | 1 neuron, sigmoid |
 
-**Total trainable parameters:** 193
+**Trainable parameters:** 193
 
-### Training Configuration
+## Training Configuration
 
-- Optimizer: Adam
-- Learning rate: 0.001
-- Loss function: Binary cross-entropy
+- Framework: TensorFlow / Keras
+- Optimizer: Adam, learning rate 0.001
+- Loss: Binary cross-entropy
 - Epochs: 100
 - Batch size: 32
 - Validation split: 20% of the training data
 - Classification threshold: 0.5
 
-Feature scaling is fitted only on the training subset and then applied to the test subset to avoid test-data leakage.
+## Held-out Test Results
 
-## Test Results
-
-The following results were obtained in this experiment:
-
-| Metric | Result |
+| Metric | Score |
 |---|---:|
 | Accuracy | 96.00% |
-| Precision | 0.9600 |
-| Recall | 0.9600 |
-| F1-score | 0.9600 |
-| ROC-AUC | 0.9940 |
+| Precision | 96.00% |
+| Recall | 96.00% |
+| F1-score | 96.00% |
+| ROC-AUC | 99.40% |
 
-The model achieved strong classification performance on the held-out test set. The ROC-AUC indicates excellent discrimination between the classes across probability thresholds.
+These scores describe this experiment on a synthetic dataset; they do not establish that the ANN is better than every alternative classifier.
 
-## Key Visualizations
+## Visualizations
 
-The notebook includes:
-- Class distribution of the generated dataset
-- Training and validation loss curves
-- Training and validation accuracy curves
-- Confusion matrix
-- ANN decision-boundary visualization
+The notebook includes the generated class distribution, training/validation loss and accuracy curves, confusion matrix, and learned decision boundary.
 
-The decision-boundary plot demonstrates that the network learns a nonlinear separation that follows the curved structure of the two classes.
+## Run the Notebook
 
-## How to Run
+- [View notebook on GitHub](ann_make_moons_classification.ipynb)
+- [Open notebook in Google Colab](https://colab.research.google.com/github/Harshithamb25/ai-coe-projects/blob/main/projects/02-ann-make-moons/ann_make_moons_classification.ipynb)
 
-1. Open the notebook in Google Colab.
-2. Run the cells sequentially from top to bottom.
-3. Review the training curves, evaluation metrics, and decision-boundary plot.
+Run cells sequentially. The common scientific Python and TensorFlow/Keras libraries are available in Google Colab.
 
-All required libraries are commonly available in Google Colab.
+## Limitations and Next Steps
 
-## Limitations
-
-- The dataset is synthetic and does not represent every real-world classification problem.
-- Performance depends on the selected architecture, hyperparameters, and random initialization.
-- The experiment does not establish that this ANN outperforms every alternative classifier.
-- Results on this dataset do not guarantee similar performance on unseen real-world datasets.
-
-## Future Improvements
-
-- Compare the ANN against Logistic Regression, Decision Trees, and Support Vector Machines.
-- Experiment with different architectures and activation functions.
-- Evaluate performance across multiple random seeds.
-- Explore early stopping and regularization.
+- The dataset is synthetic and has only two input features.
+- Performance can vary with initialization, architecture, and hyperparameters.
+- Compare with Logistic Regression, Decision Trees, and Support Vector Machines.
+- Repeat experiments across multiple random seeds and test regularization or early stopping.
 
 ## Conclusion
 
-This project demonstrates the use of a feedforward ANN for nonlinear binary classification. With two ReLU hidden layers and a sigmoid output, the model achieved 96.00% test accuracy and 0.9940 ROC-AUC on the generated make-moons dataset.
-
-The experiment provides practical experience with neural network design, training, evaluation, and decision-boundary visualization.
+With two ReLU hidden layers and a sigmoid output, the network achieved **96.00% test accuracy** and **99.40% ROC-AUC** in this make-moons experiment.
