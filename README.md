@@ -8,9 +8,9 @@ A curated collection of hands-on **Machine Learning (ML) and Deep Learning (DL) 
 |---|---|---|---|
 | 01 | [SMS Spam Classification — Multinomial Naive Bayes](projects/01-spam-classification/README.md) | Text preprocessing, bag-of-words, probabilistic classification, precision and recall | Available |
 | 02 | [ANN Binary Classification with `make_moons`](projects/03-ann-make-moons/README.md) | Neural networks, ReLU and sigmoid activations, nonlinear decision boundaries | Available |
-| 03 | Titanic Survival Prediction | Data cleaning, feature engineering, classification and evaluation | Planned |
-| 04 | CNN Dog–Cat Classification | Convolutional neural networks and image classification | Planned |
-| 05 | Transformer-Based Next-Token Prediction | Self-attention and next-token prediction | Planned |
+| 03 | CNN Dog–Cat Classification | Convolutional neural networks and image classification | Planned |
+| 04 | Transformer-Based Next-Token Prediction | Self-attention and next-token prediction | Planned |
+| 05 | Titanic Survival Prediction | Data cleaning, feature engineering, classification and evaluation | Planned |
 
 ## Featured Projects
 
